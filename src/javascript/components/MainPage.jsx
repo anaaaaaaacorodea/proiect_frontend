@@ -17,15 +17,13 @@ function MainPage() {
                     <div className='w-1/2 pl-20'>
                         <Guess />
                     </div>
-            </div>
-            <center>
-            <div class="container">
-                <div class="circle">
-                </div>
-            </div>
-            </center>
-
-
+                    </div>
+                    <center>
+                    <div class="container">
+                        <div class="circle">
+                        </div>
+                    </div>
+                    </center>
             <div className="flex max-w-7xl m-auto px-14 pt-6">
                 <Results />
             </div>

@@ -19,11 +19,9 @@ function GenerateGuess() {
 
             if (result.data.randomPokemonResult) {
                 setPokemon(result.data.randomPokemonResult);
-                //console.log(result.data.randomPokemonResult);
                 sessionStorage.setItem('pokeName', result.data.randomPokemonResult.pokemonName);
                 sessionStorage.setItem('pokeDescription', result.data.randomPokemonResult.pokemonDescription);
                 sessionStorage.setItem('pokeImage', result.data.randomPokemonResult.pokemonImageLink);
-                //console.log(localStorage.getItem('my-key'));
             }
         };
         
@@ -62,7 +60,7 @@ function GenerateGuess() {
                     <div className='block uppercase text-sm font-bold mb-4 tracking-wide text-gray-700'>{`${randomPokemonResult.pokemonType}`}</div>
     
                     <div className='text-1xl font-bold mb-4 py-2 tracking-wide text-gray-600'>The keywords for your pokemon are:</div>
-                    <div className='block uppercase text-sm font-bold mb-4 tracking-wide text-gray-700'>{`${randomPokemonResult.pokemonLabels}`}</div>
+                    <div className='block uppercase text-xs font-bold text-gray-700'>{`${randomPokemonResult.pokemonLabels}`}</div>
     
                     <div className='text-1xl font-bold mb-4 py-2 tracking-wide text-gray-600'>Your pokemon's dominant colors are:</div>
                     <div className="align-items:center">

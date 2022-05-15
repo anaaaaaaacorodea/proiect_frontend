@@ -26,23 +26,26 @@ function Results() {
 
     if (guessSent) {
         let answer;
+        let fontcolor;
         if (name === sessionStorage.getItem('guessedName')) {
             answer = "Good job, you guesses the pokemon right!";
+            fontcolor = "green";
         }
         else {
             answer = "You did not guess the pokemon right, try again!";
+            fontcolor = "red";
         }
 
         return (
             <div>
-                <div className='text-2xl font-bold mb-4'>
+                <div className='text-2xl font-bold mb-4 pt-5' style={{color: `${fontcolor}`}}>
                     {`${answer}`}
                 </div>
                 <div className="flex max-w-7xl m-auto px-14 py-5">
 
-                    <div className='w-1/2 pr-5'>
+                    <div className='w-1/2 pr-20'>
 
-                        <div className='align-items:center block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 py-2 '>
+                        <div className='align-items:center block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 px-14 pt-5'>
                             Your pokemon is: {`${name}`}
                         </div>
                         <center>
@@ -50,8 +53,8 @@ function Results() {
                             </img>
                         </center>
                     </div>
-                    <div className='w-1/2 pl-5'>
-                        <div className='align-items:center block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 py-2 '>
+                    <div className='w-1/2 pl-20'>
+                        <div className='align-items:center block uppercase tracking-wide text-gray-700 text-xs font-bold px-14 pt-6 '>
                             Description:
                         </div>
                         <div>
